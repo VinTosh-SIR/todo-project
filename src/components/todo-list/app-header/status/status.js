@@ -1,12 +1,13 @@
-import "./item-status-filter.css";
+import "./status.css";
 import React from "react";
 
-const ItemStatusFilter =({toDo, done})=>{
+const Status =({toDo, done})=>{
     return(
         <div className="col block-right">
-            <span> more to do,</span><span> done</span>
+            <span>{toDo} more to do,</span><span>{done} done</span>
         </div>
     )
+
 };
 
-export default ItemStatusFilter;
+export default Status;

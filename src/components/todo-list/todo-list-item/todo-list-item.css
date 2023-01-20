@@ -1,0 +1,36 @@
+.right{
+ float: right;
+}
+.btn-trash{
+    border: 2px solid red;
+}
+.btn-trash:hover{
+    border: 2px solid #d20c0c;
+}
+.btn-important{
+    border: 2px solid green;
+    margin-left: 5px;
+}
+.btn-important:hover{
+    border: 2px solid #0b8c37;
+}
+.btn-check{
+    border: 2px solid #0d6efd;
+}
+.btn-check:hover{
+    border: 2px solid #0c63e1;
+}
+.right > .btn{
+    padding: 3px 6px 3px 6px;
+}
+.todo-list-item{
+    color: black;
+    font-size: 1rem;
+}
+.done{
+    text-decoration: line-through;
+    color: black;
+}
+.important{
+    color: #0b8c37;
+}
