@@ -3,31 +3,45 @@ import "./item-add-form.css";
 
 export default class ItemAddForm extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {value: ''};
+
+        this.onLabelChange = this.onLabelChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+    }
+
     state = {
-        label: ''
+        label: "",
     };
 
-    onLabelChange = (event) => {
+    onLabelChange = (e) => {
         this.setState({
-            label: event.target.value
+            label: e.target.value
         });
     };
 
-    onSubmit = (event) =>{
+    onSubmit = (e) => {
+        e.preventDefault();
+        this.props.onItemAdded(this.state.label);
+        this.setState({
+            label: ""
+        });
 
-        // preventDefault() метод для отмены перезагрузки страницы
-        event.preventDefault()
-        this.props.onItemAdded(this.state.label)
-    }
+    };
 
     render() {
         return (
-            <form className="item-add-form d-flex">
-                <input type="text" className="form-control" onChange={this.onLableChange}
-                       placeholder="What needs to be done"/>
+            <form
+                className="item-add-form d-flex"
+                onSubmit={this.onSubmit}>
+                <input type="text"
+                       className="form-control"
+                       onChange={this.onLabelChange}
+                       placeholder="What needs to be done"
+                       value={this.state.label}/>
                 <button
-                    onSubmit={() => this.onSubmit}
-                    className="btn btn-primary">Write
+                    className="btn btn-primary">Submit
                 </button>
             </form>
         )

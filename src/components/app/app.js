@@ -38,7 +38,6 @@ export default class App extends Component {
     }
 
     addItem = (text) => {
-
 //generate id
         const newItem = this.createTodoItem(text);
 //add element in arr
