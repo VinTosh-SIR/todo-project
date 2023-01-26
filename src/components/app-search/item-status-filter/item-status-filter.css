@@ -1,17 +1,6 @@
-
-.block-right{
-    display: flex;
-    justify-content: right;
+.btn{
+    margin: 0 1px 0 1px;
 }
-
-.left-btn{
-    border-radius: 4px 0 0 4px;
-    border-right: 0;
-}
-.central-btn{
-    border-radius: 0;
-}
-.right-btn{
-    border-radius: 0 4px 4px 0;
-    border-left: 0;
+.btn-right{
+    float: right;
 }

@@ -6,7 +6,6 @@ export default class ItemAddForm extends Component {
     constructor(props) {
         super(props);
         this.state = {value: ''};
-
         this.onLabelChange = this.onLabelChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
     }

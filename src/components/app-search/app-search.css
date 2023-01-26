@@ -5,6 +5,6 @@
     display: flex;
 }
 
-input[type=search] {
+.row >input[type=text] {
     margin-left: 12px;
 }
